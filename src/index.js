@@ -1,1 +1,9 @@
-<h1>Nueva versión</h1>
+const http = require('http');
+const port = 3000;
+http.createServer((req, res) => {
+  res.writeHead(200, { 'Content-Type': 'text/html' });
+  res.end('<h1>Hola CI...probemos por segunda vez</h1>');
+}).listen(port, () => {
+  console.log(`Servidor escuchando en puerto ${port}`);
+});
+<h1>Versión desplegada</h1>
